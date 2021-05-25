@@ -49,7 +49,7 @@ class Measurements(Resource):
     def get(self):
         return measurements
 
-    @api.doc(model=[measurement_model], body=add_measurement_request_body)
+    @api.doc(model=measurement_model, body=add_measurement_request_body)
     def post(self):
         measurement = dict(
             id=str(uuid.uuid4()),
